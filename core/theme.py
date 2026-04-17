@@ -106,7 +106,11 @@ def _assets(filename: str) -> Path:
 
 
 def _portraits_dir() -> Path:
-    # Carpeta de retratos movida fuera del proyecto
+    # Primero busca dentro del repo (para Streamlit Cloud)
+    local = _EKKLESIA_ROOT / "assets" / "portraits"
+    if local.exists():
+        return local
+    # Fallback: carpeta externa (desarrollo local antiguo)
     return _EKKLESIA_ROOT.parent / "Iconos e imagenes" / "Portraits"
 
 
@@ -379,17 +383,20 @@ def _resolve_asset(ruta: str) -> Path:
     p = Path(ruta)
     if p.is_absolute() and p.exists():
         return p
-    # Relativo al root de ekklesia
-    candidate = _EKKLESIA_ROOT / ruta
+    name = Path(ruta).name
+    # 1. assets/ dentro de ekklesia/ (Streamlit Cloud + desarrollo)
+    candidate = _EKKLESIA_ROOT / "assets" / name
     if candidate.exists():
         return candidate
-    # Carpeta de imágenes compartida fuera de ekklesia/
-    name = Path(ruta).name
-    candidate2 = _EKKLESIA_ROOT.parent / "Iconos e imagenes" / name
+    # 2. Relativo al root de ekklesia
+    candidate2 = _EKKLESIA_ROOT / ruta
     if candidate2.exists():
         return candidate2
-    # assets/ dentro de ekklesia/
-    return _EKKLESIA_ROOT / "assets" / name
+    # 3. Carpeta de imágenes externa (fallback desarrollo local)
+    candidate3 = _EKKLESIA_ROOT.parent / "Iconos e imagenes" / name
+    if candidate3.exists():
+        return candidate3
+    return candidate  # devuelve assets/ aunque no exista
 
 
 def _banner_html(ruta: str, css_class: str, height_px: int = 200) -> str:
