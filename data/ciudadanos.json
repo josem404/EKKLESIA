@@ -1,0 +1,924 @@
+[
+  {
+    "id": "c-mag-01",
+    "alias": "Aritma M. — f₁",
+    "portrait": "Icons_01.png",
+    "nombre_real": "Alumno/a 01",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x**2",
+        "condicion": "And(x >= 0, x < 1)"
+      },
+      {
+        "expr": "2 - x",
+        "condicion": "And(x >= 1, x <= 3)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-02",
+    "alias": "Euclida M. — f₂",
+    "portrait": "Icons_02.png",
+    "nombre_real": "Alumno/a 02",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1/x",
+        "condicion": "x > 0"
+      },
+      {
+        "expr": "-1",
+        "condicion": "x <= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": false,
+      "continua_en_0": false,
+      "asintota_vertical": true,
+      "asintota_horizontal": true,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-03",
+    "alias": "Fermata M. — f₃",
+    "portrait": "Icons_03.png",
+    "nombre_real": "Alumno/a 03",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x + 1",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "1",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-04",
+    "alias": "Gaussia M. — f₄",
+    "portrait": "Icons_04.png",
+    "nombre_real": "Alumno/a 04",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "2*x",
+        "condicion": "And(x >= 0, x <= 1)"
+      },
+      {
+        "expr": "2",
+        "condicion": "x > 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-05",
+    "alias": "Hilberta M. — f₅",
+    "portrait": "Icons_05.png",
+    "nombre_real": "Alumno/a 05",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "-x**2 + 4",
+        "condicion": "And(x >= -2, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-06",
+    "alias": "Integra M. — f₆",
+    "portrait": "Icons_06.png",
+    "nombre_real": "Alumno/a 06",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "3",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "3 - x",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-07",
+    "alias": "Jacobina M. — f₇",
+    "portrait": "Icons_07.png",
+    "nombre_real": "Alumno/a 07",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x**3",
+        "condicion": "And(x >= -1, x <= 1)"
+      },
+      {
+        "expr": "1",
+        "condicion": "x > 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-08",
+    "alias": "Kovaleva M. — f₈",
+    "portrait": "Icons_08.png",
+    "nombre_real": "Alumno/a 08",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1/(x-1)",
+        "condicion": "x != 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": true,
+      "asintota_horizontal": true,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-mag-09",
+    "alias": "Lagranda M. — f₉",
+    "portrait": "Icons_09.png",
+    "nombre_real": "Alumno/a 09",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x",
+        "condicion": "And(x >= 0, x < 1)"
+      },
+      {
+        "expr": "2 - x",
+        "condicion": "And(x >= 1, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-10",
+    "alias": "Mobiana M. — f₁₀",
+    "portrait": "Icons_10.png",
+    "nombre_real": "Alumno/a 10",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "0",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "x",
+        "condicion": "And(x >= 0, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-11",
+    "alias": "Neumana M. — f₁₁",
+    "portrait": "Icons_11.png",
+    "nombre_real": "Alumno/a 11",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "-2",
+        "condicion": "x < -1"
+      },
+      {
+        "expr": "x",
+        "condicion": "And(x >= -1, x <= 1)"
+      },
+      {
+        "expr": "2",
+        "condicion": "x > 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-mag-12",
+    "alias": "Ordinata M. — f₁₂",
+    "portrait": "Icons_12.png",
+    "nombre_real": "Alumno/a 12",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x**2 - 1",
+        "condicion": "And(x >= -2, x < 0)"
+      },
+      {
+        "expr": "1",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-13",
+    "alias": "Pascalina M. — f₁₃",
+    "portrait": "Icons_13.png",
+    "nombre_real": "Alumno/a 13",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1 - x",
+        "condicion": "x < 1"
+      },
+      {
+        "expr": "x - 1",
+        "condicion": "x >= 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-14",
+    "alias": "Quaternia M. — f₁₄",
+    "portrait": "Icons_14.png",
+    "nombre_real": "Alumno/a 14",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "2",
+        "condicion": "And(x >= -3, x < 0)"
+      },
+      {
+        "expr": "x + 2",
+        "condicion": "And(x >= 0, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": true,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-mag-15",
+    "alias": "Riemanna M. — f₁₅",
+    "portrait": "Icons_15.png",
+    "nombre_real": "Alumno/a 15",
+    "provincia": "magnitudia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x/(x+1)",
+        "condicion": "x > -1"
+      },
+      {
+        "expr": "0",
+        "condicion": "x <= -1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-01",
+    "alias": "Sylvana I. — f₁",
+    "portrait": "Icons_16.png",
+    "nombre_real": "Alumno/a 16",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x + 2",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "2 - x",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-02",
+    "alias": "Topolia I. — f₂",
+    "portrait": "Icons_17.png",
+    "nombre_real": "Alumno/a 17",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "x**2 + 1",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": true,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-03",
+    "alias": "Uniova I. — f₃",
+    "portrait": "Icons_18.png",
+    "nombre_real": "Alumno/a 18",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1/x**2",
+        "condicion": "x != 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": false,
+      "continua_en_0": false,
+      "asintota_vertical": true,
+      "asintota_horizontal": true,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-int-04",
+    "alias": "Vectora I. — f₄",
+    "portrait": "Icons_19.png",
+    "nombre_real": "Alumno/a 19",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "3*x - 1",
+        "condicion": "And(x >= 0, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-05",
+    "alias": "Weiara I. — f₅",
+    "portrait": "Icons_20.png",
+    "nombre_real": "Alumno/a 20",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "-1",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "0",
+        "condicion": "x == 0"
+      },
+      {
+        "expr": "1",
+        "condicion": "x > 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-int-06",
+    "alias": "Xilema I. — f₆",
+    "portrait": "Icons_21.png",
+    "nombre_real": "Alumno/a 21",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x**2",
+        "condicion": "And(x >= -2, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-07",
+    "alias": "Yuliana I. — f₇",
+    "portrait": "Icons_22.png",
+    "nombre_real": "Alumno/a 22",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "2*x + 1",
+        "condicion": "x < 1"
+      },
+      {
+        "expr": "4 - x",
+        "condicion": "x >= 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": false,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-08",
+    "alias": "Zeronia I. — f₈",
+    "portrait": "Icons_23.png",
+    "nombre_real": "Alumno/a 23",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "0",
+        "condicion": "x <= 0"
+      },
+      {
+        "expr": "x",
+        "condicion": "And(x > 0, x < 1)"
+      },
+      {
+        "expr": "1",
+        "condicion": "x >= 1"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-09",
+    "alias": "Aritmo I. — f₉",
+    "portrait": "Icons_24.png",
+    "nombre_real": "Alumno/a 24",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x - 3",
+        "condicion": "x > 2"
+      },
+      {
+        "expr": "-1",
+        "condicion": "x <= 2"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-int-10",
+    "alias": "Euclidio I. — f₁₀",
+    "portrait": "Icons_25.png",
+    "nombre_real": "Alumno/a 25",
+    "provincia": "intervalia",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x/(x**2+1)",
+        "condicion": "True"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-bre-01",
+    "alias": "Fermato B. — f₁",
+    "portrait": "Icons_26.png",
+    "nombre_real": "Alumno/a 26",
+    "provincia": "brevitas",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "0",
+        "condicion": "x == 0"
+      },
+      {
+        "expr": "-1",
+        "condicion": "x > 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": true
+    }
+  },
+  {
+    "id": "c-bre-02",
+    "alias": "Gaussio B. — f₂",
+    "portrait": "Icons_27.png",
+    "nombre_real": "Alumno/a 27",
+    "provincia": "brevitas",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x**2 - x",
+        "condicion": "And(x >= 0, x <= 2)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-bre-03",
+    "alias": "Hilberto B. — f₃",
+    "portrait": "Icons_28.png",
+    "nombre_real": "Alumno/a 28",
+    "provincia": "brevitas",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "2*x",
+        "condicion": "x < 0"
+      },
+      {
+        "expr": "x + 1",
+        "condicion": "x >= 0"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": false,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": false,
+      "punto_fijo": false,
+      "creciente_0_1": true,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-bre-04",
+    "alias": "Integro B. — f₄",
+    "portrait": "Icons_29.png",
+    "nombre_real": "Alumno/a 29",
+    "provincia": "brevitas",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "1/(x+2)",
+        "condicion": "x > -2"
+      },
+      {
+        "expr": "0",
+        "condicion": "x <= -2"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": true,
+      "acotada_sup": true,
+      "punto_fijo": false,
+      "creciente_0_1": false,
+      "imagen_contiene_0": false,
+      "lim_mas_inf_finito": true,
+      "lim_menos_inf_finito": false
+    }
+  },
+  {
+    "id": "c-bre-05",
+    "alias": "Jacobino B. — f₅",
+    "portrait": "Icons_30.png",
+    "nombre_real": "Alumno/a 30",
+    "provincia": "brevitas",
+    "bloques": 10,
+    "rol_institucional": "ciudadano",
+    "funcion_json": [
+      {
+        "expr": "x",
+        "condicion": "And(x >= -1, x < 0)"
+      },
+      {
+        "expr": "0",
+        "condicion": "x == 0"
+      },
+      {
+        "expr": "1 - x",
+        "condicion": "And(x > 0, x <= 1)"
+      }
+    ],
+    "propiedades": {
+      "definida_en_0": true,
+      "continua_en_0": true,
+      "asintota_vertical": false,
+      "asintota_horizontal": false,
+      "acotada_sup": true,
+      "punto_fijo": true,
+      "creciente_0_1": false,
+      "imagen_contiene_0": true,
+      "lim_mas_inf_finito": false,
+      "lim_menos_inf_finito": false
+    }
+  }
+]

@@ -1,0 +1,8 @@
+streamlit>=1.35.0
+supabase>=2.4.0
+sympy>=1.12
+pandas>=2.0.0
+plotly>=5.18.0
+qrcode[pil]>=7.4.2
+pyzbar>=0.1.9
+python-dotenv>=1.0.0

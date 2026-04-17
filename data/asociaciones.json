@@ -1,0 +1,85 @@
+[
+  {
+    "id": "asoc-mag-001",
+    "nombre": "Asociación de la Continuidad",
+    "provincia": "magnitudia",
+    "propiedades_ord": ["continua_en_0", "punto_fijo"],
+    "estado": "aprobada",
+    "motivo_rechazo": null,
+    "miembros": [
+      {
+        "ciudadano_id": "c-mag-01",
+        "alias": "Aritma M. — f₁",
+        "id_racional": "39/1",
+        "id_decimal": "39.0",
+        "patron": [true, true]
+      },
+      {
+        "ciudadano_id": "c-mag-02",
+        "alias": "Euclida M. — f₂",
+        "id_racional": "1/39",
+        "id_decimal": "0.0256",
+        "patron": [false, false]
+      },
+      {
+        "ciudadano_id": "c-mag-06",
+        "alias": "Integra M. — f₆",
+        "id_racional": "13/3",
+        "id_decimal": "4.333",
+        "patron": [false, true]
+      },
+      {
+        "ciudadano_id": "c-mag-14",
+        "alias": "Quaternia M. — f₁₄",
+        "id_racional": "3/13",
+        "id_decimal": "0.2308",
+        "patron": [true, false]
+      }
+    ]
+  },
+  {
+    "id": "asoc-int-001",
+    "nombre": "Asociación del Intervalo",
+    "provincia": "intervalia",
+    "propiedades_ord": ["continua_en_0", "acotada_sup", "creciente_0_1"],
+    "estado": "pendiente",
+    "motivo_rechazo": null,
+    "miembros": [
+      {
+        "ciudadano_id": "c-int-01",
+        "alias": "Sylvana I. — f₁",
+        "id_racional": "33/17",
+        "id_decimal": "1.9412",
+        "patron": [true, true, false]
+      },
+      {
+        "ciudadano_id": "c-int-02",
+        "alias": "Topolia I. — f₂",
+        "id_racional": "51/11",
+        "id_decimal": "4.6364",
+        "patron": [true, false, true]
+      },
+      {
+        "ciudadano_id": "c-int-03",
+        "alias": "Uniova I. — f₃",
+        "id_racional": "1/561",
+        "id_decimal": "0.0018",
+        "patron": [false, false, false]
+      },
+      {
+        "ciudadano_id": "c-int-04",
+        "alias": "Vectora I. — f₄",
+        "id_racional": "561/1",
+        "id_decimal": "561.0",
+        "patron": [true, true, true]
+      },
+      {
+        "ciudadano_id": "c-int-05",
+        "alias": "Weiara I. — f₅",
+        "id_racional": "11/51",
+        "id_decimal": "0.2157",
+        "patron": [false, true, false]
+      }
+    ]
+  }
+]

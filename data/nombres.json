@@ -1,0 +1,19 @@
+{
+  "_nota": "Nombres temáticos para los ciudadanos de Funcionalia. Inspirados en matemáticos históricos, términos matemáticos y nombres clásicos con resonancia griega/latina.",
+  "nombres": [
+    "Aritma", "Euclida", "Fermata", "Gaussia", "Hilberta",
+    "Intégra", "Jacobina", "Kovaleva", "Lagranda", "Möbiana",
+    "Neumaña", "Ordinata", "Pascalina", "Quaternia", "Riemanna",
+    "Sylvana", "Topolia", "Uniova", "Vectora", "Weiara",
+    "Xilema", "Yuliana", "Zeronia", "Aritmo", "Euclidio",
+    "Fermato", "Gaussio", "Hilberto", "Integro", "Jacobino",
+    "Kovalo", "Lagranjo", "Möbiano", "Neumano", "Ordinato",
+    "Pascalino", "Quaternio", "Riemanno", "Sylvano", "Topolo"
+  ],
+  "apellidos": [
+    "de Magnitudia", "de Intervalia", "de Brevitas",
+    "del Eje", "del Dominio", "del Límite", "del Conjunto",
+    "de la Función", "del Plano", "del Vector"
+  ],
+  "_uso": "Asignar un nombre aleatorio de 'nombres' + apellido según la provincia del ciudadano al crear la sesión."
+}

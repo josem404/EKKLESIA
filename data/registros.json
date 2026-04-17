@@ -1,0 +1,191 @@
+[
+  {
+    "id": "reg-1ef13121",
+    "ciudadano_id": "c-mag-01",
+    "alias": "Aritma M. — f₁",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:49:45.843506"
+  },
+  {
+    "id": "reg-7c98f4a0",
+    "ciudadano_id": "c-mag-02",
+    "alias": "Euclida M. — f₂",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "no_satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:49:54.028023"
+  },
+  {
+    "id": "reg-6b26d4f0",
+    "ciudadano_id": "c-mag-03",
+    "alias": "Fermata M. — f₃",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:49:57.907468"
+  },
+  {
+    "id": "reg-6225d4f4",
+    "ciudadano_id": "c-mag-04",
+    "alias": "Gaussia M. — f₄",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:50:01.308212"
+  },
+  {
+    "id": "reg-185595a9",
+    "ciudadano_id": "c-mag-04",
+    "alias": "Gaussia M. — f₄",
+    "propiedad_codigo": "asintota_vertical",
+    "estado": "no_satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:50:07.672844"
+  },
+  {
+    "id": "reg-b74556d2",
+    "ciudadano_id": "c-mag-03",
+    "alias": "Fermata M. — f₃",
+    "propiedad_codigo": "asintota_vertical",
+    "estado": "no_satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:50:10.991741"
+  },
+  {
+    "id": "reg-caad3102",
+    "ciudadano_id": "c-mag-02",
+    "alias": "Euclida M. — f₂",
+    "propiedad_codigo": "asintota_vertical",
+    "estado": "satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:50:15.422390"
+  },
+  {
+    "id": "reg-483e846f",
+    "ciudadano_id": "c-mag-01",
+    "alias": "Aritma M. — f₁",
+    "propiedad_codigo": "asintota_vertical",
+    "estado": "no_satisface",
+    "registrado_por": "intervalia",
+    "timestamp": "2026-04-11T12:50:18.579662"
+  },
+  {
+    "id": "reg-9384d494",
+    "ciudadano_id": "c-mag-06",
+    "alias": "Integra M. — f₆",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T16:50:12.863700"
+  },
+  {
+    "id": "reg-e364dcba",
+    "ciudadano_id": "c-mag-01",
+    "alias": "Aritma M. — f₁",
+    "propiedad_codigo": "continua_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T17:11:17.411381"
+  },
+  {
+    "id": "reg-34681864",
+    "ciudadano_id": "c-mag-11",
+    "alias": "Neumana M. — f₁₁",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T17:38:15.603721"
+  },
+  {
+    "id": "reg-d21a498d",
+    "ciudadano_id": "c-mag-12",
+    "alias": "Ordinata M. — f₁₂",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T17:38:27.840317"
+  },
+  {
+    "id": "reg-dfd0155d",
+    "ciudadano_id": "c-mag-10",
+    "alias": "Mobiana M. — f₁₀",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T17:40:18.147892"
+  },
+  {
+    "id": "reg-13911fd7",
+    "ciudadano_id": "c-mag-08",
+    "alias": "Kovaleva M. — f₈",
+    "propiedad_codigo": "definida_en_0",
+    "estado": "satisface",
+    "registrado_por": "magnitudia",
+    "timestamp": "2026-04-11T17:40:28.772693"
+  },
+  {
+    "id": "reg-a1b2c3d4",
+    "ciudadano_id": "c-mag-01",
+    "alias": "Aritma M. — f₁",
+    "propiedad_codigo": "punto_fijo",
+    "estado": "satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:00.000000"
+  },
+  {
+    "id": "reg-a2b3c4d5",
+    "ciudadano_id": "c-mag-02",
+    "alias": "Euclida M. — f₂",
+    "propiedad_codigo": "continua_en_0",
+    "estado": "no_satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:01.000000"
+  },
+  {
+    "id": "reg-a3b4c5d6",
+    "ciudadano_id": "c-mag-02",
+    "alias": "Euclida M. — f₂",
+    "propiedad_codigo": "punto_fijo",
+    "estado": "no_satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:02.000000"
+  },
+  {
+    "id": "reg-a4b5c6d7",
+    "ciudadano_id": "c-mag-06",
+    "alias": "Integra M. — f₆",
+    "propiedad_codigo": "continua_en_0",
+    "estado": "no_satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:03.000000"
+  },
+  {
+    "id": "reg-a5b6c7d8",
+    "ciudadano_id": "c-mag-06",
+    "alias": "Integra M. — f₆",
+    "propiedad_codigo": "punto_fijo",
+    "estado": "satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:04.000000"
+  },
+  {
+    "id": "reg-a6b7c8d9",
+    "ciudadano_id": "c-mag-14",
+    "alias": "Quaternia M. — f₁₄",
+    "propiedad_codigo": "continua_en_0",
+    "estado": "satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:05.000000"
+  },
+  {
+    "id": "reg-a7b8c9da",
+    "ciudadano_id": "c-mag-14",
+    "alias": "Quaternia M. — f₁₄",
+    "propiedad_codigo": "punto_fijo",
+    "estado": "no_satisface",
+    "registrado_por": "asoc:magnitudia",
+    "timestamp": "2026-04-13T10:15:06.000000"
+  }
+]

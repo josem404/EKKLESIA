@@ -1,0 +1,112 @@
+[
+  {
+    "id": "prop-01",
+    "codigo": "definida_en_0",
+    "descripcion": "f está definida en x = 0",
+    "descripcion_corta": "Def. en 0",
+    "sympy_expr": "f.subs(x, 0) != nan and f.subs(x, 0).is_finite",
+    "primo_asignado": 2,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "nacional"
+  },
+  {
+    "id": "prop-02",
+    "codigo": "continua_en_0",
+    "descripcion": "f es continua en x = 0",
+    "descripcion_corta": "Continua en 0",
+    "sympy_expr": "limit(f, x, 0, '+') == limit(f, x, 0, '-') == f.subs(x, 0)",
+    "primo_asignado": 3,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "magnitudia"
+  },
+  {
+    "id": "prop-03",
+    "codigo": "asintota_vertical",
+    "descripcion": "f tiene al menos una asíntota vertical",
+    "descripcion_corta": "A. Vertical",
+    "sympy_expr": "any(limit(f, x, p, '+') in (oo, -oo) or limit(f, x, p, '-') in (oo, -oo) for p in solve(denom(f), x))",
+    "primo_asignado": 5,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "intervalia"
+  },
+  {
+    "id": "prop-04",
+    "codigo": "asintota_horizontal",
+    "descripcion": "f tiene al menos una asíntota horizontal",
+    "descripcion_corta": "A. Horizontal",
+    "sympy_expr": "limit(f, x, oo).is_finite or limit(f, x, -oo).is_finite",
+    "primo_asignado": 7,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "nacional"
+  },
+  {
+    "id": "prop-05",
+    "codigo": "acotada_sup",
+    "descripcion": "f está acotada superiormente en su dominio",
+    "descripcion_corta": "Acotada sup.",
+    "sympy_expr": "function_range(f, x, Interval(-10, 10)).sup != oo",
+    "primo_asignado": 11,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "nacional"
+  },
+  {
+    "id": "prop-06",
+    "codigo": "punto_fijo",
+    "descripcion": "f tiene al menos un punto fijo (f(x) = x para algún x)",
+    "descripcion_corta": "Punto fijo",
+    "sympy_expr": "len(solve(f - x, x)) > 0",
+    "primo_asignado": 13,
+    "nivel": "medio",
+    "es_adhoc": false,
+    "provincia": "magnitudia"
+  },
+  {
+    "id": "prop-07",
+    "codigo": "creciente_0_1",
+    "descripcion": "f es estrictamente creciente en el intervalo (0, 1)",
+    "descripcion_corta": "Creciente en (0,1)",
+    "sympy_expr": "all(diff(f, x).subs(x, Rational(i, 10)) > 0 for i in range(1, 10))",
+    "primo_asignado": 17,
+    "nivel": "medio",
+    "es_adhoc": false,
+    "provincia": "nacional"
+  },
+  {
+    "id": "prop-08",
+    "codigo": "imagen_contiene_0",
+    "descripcion": "El 0 pertenece a la imagen de f",
+    "descripcion_corta": "0 en Im(f)",
+    "sympy_expr": "len(solve(f, x)) > 0",
+    "primo_asignado": 19,
+    "nivel": "basico",
+    "es_adhoc": false,
+    "provincia": "magnitudia"
+  },
+  {
+    "id": "prop-09",
+    "codigo": "lim_mas_inf_finito",
+    "descripcion": "lím(x→+∞) f(x) es finito",
+    "descripcion_corta": "Lím +∞ finito",
+    "sympy_expr": "limit(f, x, oo).is_finite",
+    "primo_asignado": 23,
+    "nivel": "bachillerato",
+    "es_adhoc": false,
+    "provincia": "intervalia"
+  },
+  {
+    "id": "prop-10",
+    "codigo": "lim_menos_inf_finito",
+    "descripcion": "lím(x→−∞) f(x) es finito",
+    "descripcion_corta": "Lím −∞ finito",
+    "sympy_expr": "limit(f, x, -oo).is_finite",
+    "primo_asignado": 29,
+    "nivel": "bachillerato",
+    "es_adhoc": false,
+    "provincia": "brevitas"
+  }
+]

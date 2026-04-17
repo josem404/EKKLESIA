@@ -1,0 +1,130 @@
+[
+  {
+    "id": "col-f1ebb1e6",
+    "nombre": "Definidas en 0 y acotadas superiormente",
+    "ambito": "nacional",
+    "provincia": null,
+    "propiedades": [
+      "definida_en_0",
+      "acotada_sup"
+    ],
+    "miembros": [
+      "c-mag-01",
+      "c-mag-03",
+      "c-mag-04",
+      "c-mag-05",
+      "c-mag-06",
+      "c-mag-07",
+      "c-mag-09",
+      "c-mag-10",
+      "c-mag-11",
+      "c-mag-12",
+      "c-mag-14",
+      "c-mag-15",
+      "c-int-01",
+      "c-int-04",
+      "c-int-05",
+      "c-int-06",
+      "c-int-08",
+      "c-int-10",
+      "c-bre-01",
+      "c-bre-02",
+      "c-bre-04",
+      "c-bre-05"
+    ],
+    "estado": "completo",
+    "created_by": "rey"
+  },
+  {
+    "id": "col-414fd912",
+    "nombre": "Continuas en 0, acotadas, con imagen 0 y asíntota horizontal",
+    "ambito": "nacional",
+    "provincia": null,
+    "propiedades": [
+      "continua_en_0",
+      "acotada_sup",
+      "definida_en_0",
+      "imagen_contiene_0",
+      "asintota_horizontal"
+    ],
+    "miembros": [
+      "c-mag-04",
+      "c-mag-07",
+      "c-mag-11",
+      "c-mag-15",
+      "c-int-08",
+      "c-int-10"
+    ],
+    "estado": "completo",
+    "created_by": "rey"
+  },
+  {
+    "id": "col-fbfdbe87",
+    "nombre": "Continuas en 0 con punto fijo",
+    "ambito": "provincial",
+    "provincia": "magnitudia",
+    "propiedades": [
+      "continua_en_0",
+      "punto_fijo"
+    ],
+    "miembros": [
+      "c-mag-01",
+      "c-mag-04",
+      "c-mag-07",
+      "c-mag-09",
+      "c-mag-11"
+    ],
+    "estado": "completo",
+    "created_by": "magnitudia"
+  },
+  {
+    "id": "col-3bca0dd1",
+    "nombre": "Definidas en 0 con asíntota vertical",
+    "ambito": "provincial",
+    "provincia": "intervalia",
+    "propiedades": [
+      "definida_en_0",
+      "asintota_vertical"
+    ],
+    "miembros": [],
+    "estado": "completo",
+    "created_by": "intervalia"
+  },
+  {
+    "id": "col-8e2a1c3f",
+    "nombre": "Continuas en 0 y acotadas sup.",
+    "ambito": "provincial",
+    "provincia": "intervalia",
+    "propiedades": [
+      "continua_en_0",
+      "acotada_sup"
+    ],
+    "miembros": [
+      "c-int-01",
+      "c-int-04",
+      "c-int-05",
+      "c-int-06",
+      "c-int-08",
+      "c-int-10"
+    ],
+    "estado": "completo",
+    "created_by": "intervalia"
+  },
+  {
+    "id": "col-7d4b9f02",
+    "nombre": "Acotadas superiormente",
+    "ambito": "provincial",
+    "provincia": "brevitas",
+    "propiedades": [
+      "acotada_sup"
+    ],
+    "miembros": [
+      "c-bre-01",
+      "c-bre-02",
+      "c-bre-04",
+      "c-bre-05"
+    ],
+    "estado": "completo",
+    "created_by": "brevitas"
+  }
+]
