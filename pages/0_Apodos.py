@@ -4,6 +4,7 @@ Accesible sin login. Muestra las 30 biografías y permite identificar la propia 
 """
 
 import json
+import random
 from pathlib import Path
 
 import streamlit as st
@@ -21,6 +22,25 @@ aplicar_css_global()
 # ── Cargar datos ──────────────────────────────────────────────────────────────
 _ROOT = Path(__file__).parent.parent
 
+# Señuelos: mujeres importantes NO asignadas a ningún ciudadano
+_SEÑUELOS = [
+    "Maryam Mirzakhani",
+    "Karen Uhlenbeck",
+    "Ingrid Daubechies",
+    "Julia Robinson",
+    "Olga Ladyzhenskaya",
+    "Grace Hopper",
+    "Marie Curie",
+    "Lise Meitner",
+    "Rosalind Franklin",
+    "Alicia Boole Stott",
+    "Vera Rubin",
+    "Chien-Shiung Wu",
+    "Cecilia Payne-Gaposchkin",
+    "Marjorie Rice",
+    "Mildred Dresselhaus",
+]
+
 
 @st.cache_data
 def _cargar_apodos() -> list[dict]:
@@ -34,8 +54,25 @@ def _cargar_ciudadanos() -> dict:
     return {c["id"]: c for c in data}
 
 
+@st.cache_data
+def _lista_candidatas(nombres_reales_tuple: tuple) -> list[str]:
+    todas = list(nombres_reales_tuple) + _SEÑUELOS
+    rng = random.Random(17)
+    rng.shuffle(todas)
+    return todas
+
+
+def _coincide_palabra(texto: str, candidata: str) -> bool:
+    """True si alguna palabra completa del texto coincide con alguna palabra del nombre."""
+    palabras_buscadas = set(texto.lower().split())
+    palabras_nombre = set(candidata.lower().split())
+    return bool(palabras_buscadas & palabras_nombre)
+
+
 apodos = _cargar_apodos()
 ciudadanos = _cargar_ciudadanos()
+nombres_reales_reales = tuple(a["nombre_real"] for a in apodos)
+candidatas = _lista_candidatas(nombres_reales_reales)
 
 # ── Header ────────────────────────────────────────────────────────────────────
 color = COLORES.get("poder_judicial", "#6B4A5C")
@@ -57,7 +94,6 @@ st.divider()
 # ── Controles de búsqueda ─────────────────────────────────────────────────────
 col_num, col_nombre = st.columns([1, 3])
 
-nombres_reales = [""] + [a["nombre_real"] for a in apodos]
 numeros = [""] + list(range(1, 31))
 
 with col_num:
@@ -68,18 +104,31 @@ with col_num:
         key="apodo_num",
     )
 
+nombre_sel = ""
 with col_nombre:
-    nombre_sel = st.selectbox(
-        "Escribe o selecciona el nombre real",
-        options=nombres_reales,
-        format_func=lambda v: "— Escribe para buscar —" if v == "" else v,
-        key="apodo_nombre",
+    busqueda = st.text_input(
+        "Escribe el nombre real",
+        key="apodo_busqueda",
+        placeholder="Escribe al menos una palabra completa del nombre…",
     )
+    if busqueda and busqueda.strip():
+        filtradas = [n for n in candidatas if _coincide_palabra(busqueda.strip(), n)]
+        if filtradas:
+            nombre_sel = st.selectbox(
+                "Selecciona de las coincidencias:",
+                options=[""] + filtradas,
+                format_func=lambda v: "— Elige —" if v == "" else v,
+                key="apodo_nombre",
+            )
+        else:
+            st.caption("Ninguna coincidencia exacta en alguna palabra. Prueba con el nombre completo.")
 
 # ── Resultado: mostrar función si el nombre es correcto ───────────────────────
 if nombre_sel:
     entrada = next((a for a in apodos if a["nombre_real"] == nombre_sel), None)
-    if entrada:
+    if not entrada:
+        st.info(f"**{nombre_sel}** es una mujer importante en la ciencia, pero no tiene función asignada en Funcionalia. Sigue buscando.")
+    else:
         # Verificar coherencia con el número seleccionado
         if num_sel and num_sel != entrada["numero"]:
             st.warning(
@@ -107,7 +156,7 @@ if nombre_sel:
                     latex_str = formatear_definicion_latex(ciudadano["funcion_json"])
                     st.latex(latex_str)
 
-        st.divider()
+    st.divider()
 
 # ── Lista de todas las biografías ─────────────────────────────────────────────
 st.subheader("Las 30 biografías")
