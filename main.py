@@ -16,15 +16,6 @@ st.set_page_config(
 aplicar_css_global()
 aplicar_fondo_main()
 
-# ── Ocultar navegación nativa de Streamlit para no-autenticados ──────────────
-if "rol" not in st.session_state or st.session_state.rol is None:
-    st.markdown("""
-    <style>
-        [data-testid="stSidebarNav"] { display: none; }
-        section[data-testid="stSidebar"] { display: none; }
-    </style>
-    """, unsafe_allow_html=True)
-
 
 def pantalla_login():
     col1, col2, col3 = st.columns([1, 2, 1])

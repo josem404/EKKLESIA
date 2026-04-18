@@ -334,7 +334,7 @@ def render_provincia(provincia: str, rol: str):
                         for cid in miembros_dinamicos:
                             c = ids_provincia.get(cid) or get_ciudadano(cid)
                             if c:
-                                filas_m.append({"Alias": c["alias"], "Bloques": c["bloques"]})
+                                filas_m.append({"Apodo": c["alias"], "Bloques": c["bloques"]})
                         if filas_m:
                             st.dataframe(pd.DataFrame(filas_m),
                                          use_container_width=True, hide_index=True)
@@ -421,7 +421,7 @@ def render_provincia(provincia: str, rol: str):
                             c = get_ciudadano(cid)
                             if c:
                                 filas_prev.append({
-                                    "Alias": c["alias"],
+                                    "Apodo": c["alias"],
                                     "Provincia": c["provincia"].capitalize(),
                                 })
                         st.dataframe(pd.DataFrame(filas_prev), use_container_width=True, hide_index=True)

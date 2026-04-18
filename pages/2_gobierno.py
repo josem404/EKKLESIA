@@ -389,7 +389,7 @@ with tab_funciones:
                 st.markdown(f"### {NOMBRES_PROVINCIA[prov]} ({len(ciudadanos_prov)} ciudadanos)")
                 filas = [{
                     "Retrato": portrait_data_uri(c) or None,
-                    "Alias": c["alias"],
+                    "Apodo": c["alias"],
                     "Bloques": c["bloques"],
                 } for c in ciudadanos_prov]
                 _col_cfg_fun = {"Retrato": st.column_config.ImageColumn(label="", width="small")}

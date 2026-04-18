@@ -70,6 +70,7 @@ ICONOS = {
     "brevitas":        "⚡",
     "poder_judicial":  "⚖️",
     "congreso":        "🗳️",
+    "apodos":          "📖",
     "colectivo":       "👥",
     "asociacion":      "🔗",
     "ley":             "📜",

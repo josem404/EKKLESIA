@@ -1,0 +1,242 @@
+[
+  {
+    "numero": 1,
+    "apodo": "La Maestra de Alejandría",
+    "nombre_real": "Hipatía de Alejandría",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Vivió en el siglo IV en Egipto. Fue líder de la escuela neoplatónica y experta en astronomía y matemáticas. Inventó una versión del astrolabio y un hidroscopio. Murió trágicamente a manos de una turba debido a su influencia política y su saber científico.",
+    "ciudadano_id": "c-mag-01"
+  },
+  {
+    "numero": 2,
+    "apodo": "La Encantadora de Números",
+    "nombre_real": "Ada Lovelace",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Hija del poeta Lord Byron, fue la primera en ver que las máquinas podían hacer más que simples cálculos. Escribió el primer algoritmo de la historia para la Máquina Analítica de Babbage, describiendo cómo procesar símbolos además de números.",
+    "ciudadano_id": "c-mag-02"
+  },
+  {
+    "numero": 3,
+    "apodo": "La Madre del Álgebra Moderna",
+    "nombre_real": "Emmy Noether",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Albert Einstein la describió como \"el genio matemático más creativo desde que comenzó la educación superior de las mujeres\". Demostró un teorema fundamental que conecta las simetrías de la naturaleza con las leyes de conservación de la energía.",
+    "ciudadano_id": "c-mag-03"
+  },
+  {
+    "numero": 4,
+    "apodo": "El Pseudónimo de Monsieur LeBlanc",
+    "nombre_real": "Sophie Germain",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Para poder estudiar en la Escuela Politécnica de París (donde no aceptaban mujeres), suplantó la identidad de un antiguo alumno. Sus cartas sobre la teoría de números impresionaron al mismísimo Gauss y sus estudios sobre la elasticidad fueron clave para la ingeniería moderna.",
+    "ciudadano_id": "c-mag-04"
+  },
+  {
+    "numero": 5,
+    "apodo": "La Autora del Primer Texto Completo",
+    "nombre_real": "Maria Gaetana Agnesi",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Matemática italiana del siglo XVIII que escribió el primer libro de texto que explicaba tanto el cálculo diferencial como el integral. Una curva matemática lleva su nombre, aunque debido a una mala traducción, a menudo se la llama \"la bruja\".",
+    "ciudadano_id": "c-mag-05"
+  },
+  {
+    "numero": 6,
+    "apodo": "La Reina de las Ecuaciones en el Báltico",
+    "nombre_real": "Sofia Kovalevskaya",
+    "grupo": "Las Arquitectas de la Lógica y el Cálculo",
+    "biografia": "Fue la primera mujer en Europa en obtener un doctorado en matemáticas modernas y la primera en ser profesora en una universidad del norte de Europa. Destacó por su trabajo sobre la rotación de los anillos de Saturno y las ecuaciones en derivadas parciales.",
+    "ciudadano_id": "c-mag-06"
+  },
+  {
+    "numero": 7,
+    "apodo": "La Dama de la Lámpara",
+    "nombre_real": "Florence Nightingale",
+    "grupo": "Las Auditoras de la Sociedad",
+    "biografia": "Famosa enfermera que salvó miles de vidas en la Guerra de Crimea, no solo con medicina, sino con datos. Inventó el \"Diagrama de Área Polar\" para demostrar visualmente al gobierno que los soldados morían más por la falta de higiene que por las heridas de guerra.",
+    "ciudadano_id": "c-mag-07"
+  },
+  {
+    "numero": 8,
+    "apodo": "La Comisionada del Trabajo",
+    "nombre_real": "Janet L. Norwood",
+    "grupo": "Las Auditoras de la Sociedad",
+    "biografia": "Fue la primera mujer en dirigir la Oficina de Estadísticas Laborales de EE. UU. (BLS). Su rigor al medir el desempleo y la inflación transformó cómo los gobiernos modernos utilizan los datos económicos para tomar decisiones políticas.",
+    "ciudadano_id": "c-mag-08"
+  },
+  {
+    "numero": 9,
+    "apodo": "La Primera Dama de la Estadística",
+    "nombre_real": "Gertrude Cox",
+    "grupo": "Las Auditoras de la Sociedad",
+    "biografia": "Impulsora de la estadística experimental en agricultura. Fundó el primer departamento de estadística en Carolina del Norte y escribió un libro fundamental sobre el diseño de experimentos que aún se estudia hoy.",
+    "ciudadano_id": "c-mag-09"
+  },
+  {
+    "numero": 10,
+    "apodo": "La Demógrafa de las Migraciones",
+    "nombre_real": "Dorothy Swaine Thomas",
+    "grupo": "Las Auditoras de la Sociedad",
+    "biografia": "Fue la primera mujer presidenta de la Asociación Americana de Estadística. Usó las matemáticas para estudiar cómo se desplazan las poblaciones y cómo influyen los factores sociales en los cambios demográficos de una nación.",
+    "ciudadano_id": "c-mag-10"
+  },
+  {
+    "numero": 11,
+    "apodo": "La Estadística de la Cerveza y las Prisiones",
+    "nombre_real": "Stella Cunliffe",
+    "grupo": "Las Auditoras de la Sociedad",
+    "biografia": "Fue la primera mujer en trabajar como estadística en la empresa Guinness, donde aplicó el control de calidad. Más tarde, fue pionera en el uso de datos para reformar el sistema de prisiones en el Reino Unido.",
+    "ciudadano_id": "c-mag-11"
+  },
+  {
+    "numero": 12,
+    "apodo": "La Computadora Humana",
+    "nombre_real": "Katherine Johnson",
+    "grupo": "Las Calculadoras del Estado",
+    "biografia": "Sus cálculos de trayectoria fueron fundamentales para el éxito del vuelo de Alan Shepard y la llegada del Apolo 11 a la Luna. El astronauta John Glenn se negaba a volar si ella no comprobaba personalmente los números que arrojaba la computadora electrónica.",
+    "ciudadano_id": "c-mag-12"
+  },
+  {
+    "numero": 13,
+    "apodo": "La Programadora de Fortran",
+    "nombre_real": "Dorothy Vaughan",
+    "grupo": "Las Calculadoras del Estado",
+    "biografia": "Fue la primera supervisora afroamericana de la NASA. Previó la llegada de las computadoras electrónicas y se enseñó a sí misma y a su equipo el lenguaje de programación FORTRAN para que no se quedaran atrás en la carrera espacial.",
+    "ciudadano_id": "c-mag-13"
+  },
+  {
+    "numero": 14,
+    "apodo": "La Ingeniera de los Túneles de Viento",
+    "nombre_real": "Mary Jackson",
+    "grupo": "Las Calculadoras del Estado",
+    "biografia": "Tras luchar legalmente para poder estudiar en una escuela segregada, se convirtió en la primera mujer ingeniera afroamericana de la NASA. Se especializó en el comportamiento del aire alrededor de los aviones supersónicos.",
+    "ciudadano_id": "c-mag-14"
+  },
+  {
+    "numero": 15,
+    "apodo": "La Mente detrás del GPS",
+    "nombre_real": "Gladys West",
+    "grupo": "Las Calculadoras del Estado",
+    "biografia": "Matemática que trabajó en la base naval de Dahlgren. Sus cálculos precisos sobre el modelo gravitatorio y la forma de la Tierra (geodesia) permitieron el desarrollo de la tecnología de posicionamiento global que usamos hoy en los móviles.",
+    "ciudadano_id": "c-mag-15"
+  },
+  {
+    "numero": 16,
+    "apodo": "La Primera en el Control de Misión",
+    "nombre_real": "Frances Northcutt",
+    "grupo": "Las Calculadoras del Estado",
+    "biografia": "Conocida como \"Poppy\", fue la única mujer en el equipo de ingeniería del Centro de Control de Misión durante el programa Apolo. Sus cálculos de emergencia fueron vitales para traer de vuelta sanos y salvos a los astronautas del Apolo 13.",
+    "ciudadano_id": "c-int-01"
+  },
+  {
+    "numero": 17,
+    "apodo": "La Defensora del Sufragio",
+    "nombre_real": "Clara Campoamor",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Abogada madrileña que, en 1931, convenció a las Cortes españolas de que la democracia no era tal si se excluía a la mitad de la población. Su frase \"Tenéis el derecho que os ha dado la ley, pero no tenéis el derecho natural de excluir a la mujer\" cambió la historia de España.",
+    "ciudadano_id": "c-int-02"
+  },
+  {
+    "numero": 18,
+    "apodo": "La Directora de Prisiones",
+    "nombre_real": "Victoria Kent",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Primera mujer en intervenir ante un consejo de guerra en España. Como política, reformó el sistema penitenciario buscando la humanidad. Curiosamente, en 1931, se opuso inicialmente al voto femenino por razones estratégicas de partido, enfrentándose a la otra gran líder sufragista.",
+    "ciudadano_id": "c-int-03"
+  },
+  {
+    "numero": 19,
+    "apodo": "La Diputada de las Tres Legislaturas",
+    "nombre_real": "Margarita Nelken",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Intelectual y política socialista, fue una de las tres primeras mujeres en ser elegida diputada en las Cortes de la II República. Luchó por los derechos de los campesinos y las mujeres, participando en las tres legislaturas republicanas.",
+    "ciudadano_id": "c-int-04"
+  },
+  {
+    "numero": 20,
+    "apodo": "La Ministra Anarquista",
+    "nombre_real": "Federica Montseny",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Fue la primera mujer en ocupar un cargo ministerial en España (Sanidad y Asistencia Social). En un momento de guerra y revolución, propuso leyes avanzadas para la época sobre el aborto y la asistencia social.",
+    "ciudadano_id": "c-int-05"
+  },
+  {
+    "numero": 21,
+    "apodo": "La Visitadora de Cárceles",
+    "nombre_real": "Concepción Arenal",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Tuvo que vestir ropas de hombre para poder estudiar Derecho en la universidad. Dedicó su vida a los desfavorecidos y acuñó la famosa frase: \"Odia el delito y compadece al delincuente\". Es la gran pionera del trabajo social y el feminismo en España.",
+    "ciudadano_id": "c-int-06"
+  },
+  {
+    "numero": 22,
+    "apodo": "La Primera Corresponsal de Guerra",
+    "nombre_real": "Carmen de Burgos",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Periodista conocida por su pseudónimo \"Colombine\". Fue la primera mujer redactora de un periódico en España y una incansable luchadora por la ley del divorcio y el voto femenino a principios del siglo XX.",
+    "ciudadano_id": "c-int-07"
+  },
+  {
+    "numero": 23,
+    "apodo": "La Directora de la Residencia",
+    "nombre_real": "María de Maeztu",
+    "grupo": "Las Legisladoras de la Igualdad en España",
+    "biografia": "Hermana de un famoso pedagogo, dirigió la Residencia de Señoritas en Madrid, donde se formaron las primeras científicas y políticas de España. Creó el Lyceum Club Femenino para fomentar la independencia intelectual de la mujer.",
+    "ciudadano_id": "c-int-08"
+  },
+  {
+    "numero": 24,
+    "apodo": "La Matemática de Yale",
+    "nombre_real": "María Wonenburger",
+    "grupo": "Las Científicas de la España Moderna",
+    "biografia": "Nacida en Galicia, fue una de las mentes más brillantes en teoría de grupos. Debido a la situación en España, desarrolló casi toda su carrera en EE. UU. y Canadá, siendo una experta mundial en las álgebras que hoy llevan su nombre.",
+    "ciudadano_id": "c-int-09"
+  },
+  {
+    "numero": 25,
+    "apodo": "La Numeróloga de la Academia",
+    "nombre_real": "Pilar Bayer",
+    "grupo": "Las Científicas de la España Moderna",
+    "biografia": "Especialista en teoría de números y formas modulares. Se convirtió en la primera mujer catedrática de una facultad de matemáticas en la Universidad de Barcelona y la primera en ingresar en la Real Academia de Ciencias de España.",
+    "ciudadano_id": "c-int-10"
+  },
+  {
+    "numero": 26,
+    "apodo": "La Inventora del Pre-Ebook",
+    "nombre_real": "Ángela Ruiz Robles",
+    "grupo": "Las Científicas de la España Moderna",
+    "biografia": "Maestra leonesa que inventó la \"Enciclopedia Mecánica\", un dispositivo con bobinas y luces diseñado para que los niños no cargaran tanto peso y aprendieran de forma interactiva. Es considerada la precursora del libro electrónico.",
+    "ciudadano_id": "c-bre-01"
+  },
+  {
+    "numero": 27,
+    "apodo": "La Crítica de los Algoritmos",
+    "nombre_real": "Cathy O'Neil",
+    "grupo": "Visionarias del Poder y la Ética Global",
+    "biografia": "Matemática de Harvard que trabajó en Wall Street y descubrió cómo los modelos matemáticos pueden perpetuar la discriminación y la desigualdad. Escribió el libro Armas de Destrucción Matemática.",
+    "ciudadano_id": "c-bre-02"
+  },
+  {
+    "numero": 28,
+    "apodo": "La Criptógrafa del Premio Turing",
+    "nombre_real": "Shafi Goldwasser",
+    "grupo": "Visionarias del Poder y la Ética Global",
+    "biografia": "Ganadora del \"Nobel de informática\". Sus investigaciones sobre cómo demostrar que algo es cierto sin revelar la información (Pruebas de Conocimiento Cero) son la base de la seguridad en las elecciones y transacciones digitales modernas.",
+    "ciudadano_id": "c-bre-03"
+  },
+  {
+    "numero": 29,
+    "apodo": "La Dama de Hierro Africana",
+    "nombre_real": "Ellen Johnson Sirleaf",
+    "grupo": "Visionarias del Poder y la Ética Global",
+    "biografia": "Economista formada en Harvard y primera mujer elegida presidenta de un país africano (Liberia). Usó su conocimiento para reconstruir la economía de su nación tras la guerra y recibió el Premio Nobel de la Paz.",
+    "ciudadano_id": "c-bre-04"
+  },
+  {
+    "numero": 30,
+    "apodo": "La Reina de las Ciencias del XIX",
+    "nombre_real": "Mary Somerville",
+    "grupo": "Visionarias del Poder y la Ética Global",
+    "biografia": "A pesar de no tener educación formal, escribió libros que conectaron la astronomía, la geografía y la física. En una reseña sobre su trabajo se utilizó por primera vez en la historia la palabra \"scientist\" (científico) en lugar de \"hombre de ciencia\".",
+    "ciudadano_id": "c-bre-05"
+  }
+]

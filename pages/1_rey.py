@@ -239,7 +239,7 @@ with tab_colectivos:
                     if miembros_info:
                         filas_col = [{
                             "Retrato": portrait_data_uri(c) or None,
-                            "Alias": c["alias"],
+                            "Apodo": c["alias"],
                             "Provincia": c["provincia"].capitalize(),
                             "Bloques": c["bloques"],
                         } for c in miembros_info]
@@ -359,7 +359,7 @@ with tab_asociaciones:
                     # Tabla de miembros con IDs
                     if miembros:
                         df_m = pd.DataFrame([{
-                            "Alias": m.get("alias", m.get("ciudadano_id", "?")),
+                            "Apodo": m.get("alias", m.get("ciudadano_id", "?")),
                             "ID Racional": m.get("id_racional", "?"),
                             "ID Decimal": m.get("id_decimal", "?"),
                         } for m in miembros])
@@ -410,7 +410,7 @@ with tab_asociaciones:
                 ):
                     if miembros:
                         df_m = pd.DataFrame([{
-                            "Alias": m.get("alias", "?"),
+                            "Apodo": m.get("alias", "?"),
                             "ID Racional": m.get("id_racional", "?"),
                             "ID Decimal": m.get("id_decimal", "?"),
                         } for m in miembros])

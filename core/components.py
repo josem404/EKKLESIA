@@ -81,7 +81,7 @@ def tabla_matriz_propiedades(ciudadanos: list[dict], propiedades: list[dict],
     """
     filas = []
     for c in ciudadanos:
-        fila = {"Alias": c["alias"]}
+        fila = {"Apodo": c["alias"]}
         if mostrar_provincia:
             fila["Prov."] = c["provincia"][:3].upper()
         for p in propiedades:
@@ -151,7 +151,7 @@ def tabla_preview_colectivo(ciudadanos: list[dict], propiedades_all: list[dict],
     for c in ciudadanos:
         props_c = matriz.get(c["id"], {})
         en_col = all(props_c.get(p, False) for p in props_sel)
-        fila = {"Alias": c["alias"]}
+        fila = {"Apodo": c["alias"]}
         for pc in props_sel:
             p_obj = next((p for p in propiedades_all if p["codigo"] == pc), None)
             nombre_col = (p_obj.get("descripcion_corta") or pc) if p_obj else pc
