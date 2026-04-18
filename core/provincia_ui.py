@@ -91,14 +91,17 @@ def render_provincia(provincia: str, rol: str):
     todos_provincia = get_ciudadanos(provincia=provincia)
     ids_provincia = {c["id"]: c for c in todos_provincia}
     alias_a_id = {c["alias"]: c["id"] for c in todos_provincia}
-    _alias_opts = [""] + [c["alias"] for c in todos_provincia]
-    _alias_fmt  = lambda v: "— Selecciona o escribe para buscar —" if v == "" else v
 
     # Session-state con prefijo de provincia para evitar conflictos al navegar
     pref = f"{provincia}_"
     reg_key = f"{pref}ciudadanos_registrados"
     if reg_key not in st.session_state:
         st.session_state[reg_key] = set()
+
+    # Empadronados: solo los ciudadanos que han pasado por el Padrón en esta sesión
+    registrados_ids = st.session_state[reg_key] & set(ids_provincia.keys())
+    empadronados = [c for c in todos_provincia if c["id"] in registrados_ids]
+    _opts_emp = [c["alias"] for c in empadronados]  # opciones para tabs de trabajo
 
     # ── Tabs ──────────────────────────────────────────────────────────────────
     tab_registro, tab_propiedades, tab_colectivos, tab_asociaciones = st.tabs([
@@ -111,15 +114,14 @@ def render_provincia(provincia: str, rol: str):
     # ═══ TAB 1: Registro ══════════════════════════════════════════════════════
     with tab_registro:
         st.subheader("Empadronamiento en la provincia")
-        st.markdown("""
-        Cuando un ciudadano llega a la provincia, introduce su ID para marcarlo como presente.
-        """)
+        st.markdown("Selecciona al ciudadano que llega a la provincia para empadronarlo.")
 
         with st.form(f"{pref}registro_form"):
             alias_sel_reg = st.selectbox(
                 "Apodo del ciudadano",
-                options=_alias_opts,
-                format_func=_alias_fmt,
+                options=[c["alias"] for c in todos_provincia],
+                index=None,
+                placeholder="Selecciona o escribe para buscar…",
                 key=f"{pref}reg_alias_input",
             )
             registrar = st.form_submit_button("Empadronar ciudadano/a", type="primary")
@@ -128,22 +130,19 @@ def render_provincia(provincia: str, rol: str):
             id_limpio = alias_a_id.get(alias_sel_reg, "") if alias_sel_reg else ""
             if not id_limpio:
                 st.error("Selecciona un ciudadano.")
-            elif id_limpio not in ids_provincia:
-                st.error(f"Ciudadano no encontrado en {NOMBRES_PROVINCIA[provincia]}.")
             elif id_limpio in st.session_state[reg_key]:
-                st.warning("Este ciudadano ya estaba registrado.")
+                st.warning("Este ciudadano ya estaba empadronado.")
             else:
                 st.session_state[reg_key].add(id_limpio)
                 c_reg = ids_provincia[id_limpio]
                 st.markdown(
-                    f'<div style="color:#8BA878; font-weight:600;">✅ Registrado: '
+                    f'<div style="color:#8BA878; font-weight:600;">✅ Empadronado: '
                     f'{nombre_con_retrato_html(c_reg, size=32)}</div>',
                     unsafe_allow_html=True,
                 )
 
         st.divider()
-        registrados_ids = st.session_state[reg_key] & set(ids_provincia.keys())
-        pendientes_ids  = set(ids_provincia.keys()) - registrados_ids
+        pendientes_ids = set(ids_provincia.keys()) - registrados_ids
 
         # ── Galería con retratos ──────────────────────────────────────────────
         def _galeria_ciudadanos(lista_ids: list, highlight: bool = True):
@@ -179,21 +178,21 @@ def render_provincia(provincia: str, rol: str):
 
         col_reg, col_pend = st.columns(2)
         with col_reg:
-            st.markdown(f"**Presentes ({len(registrados_ids)}/{len(todos_provincia)})**")
+            st.markdown(f"**Empadronados ({len(registrados_ids)}/{len(todos_provincia)})**")
             if registrados_ids:
                 _galeria_ciudadanos(sorted(registrados_ids), highlight=True)
-                if st.button("Limpiar registros", type="secondary", key=f"{pref}limpiar"):
+                if st.button("Limpiar empadronamiento", type="secondary", key=f"{pref}limpiar"):
                     st.session_state[reg_key].clear()
                     st.rerun()
             else:
-                st.info("Ningún ciudadano presente aún.")
+                st.info("Ningún ciudadano empadronado aún.")
 
         with col_pend:
-            st.markdown(f"**Pendientes ({len(pendientes_ids)})**")
+            st.markdown(f"**Sin empadronar ({len(pendientes_ids)})**")
             if pendientes_ids:
                 _galeria_ciudadanos(sorted(pendientes_ids), highlight=False)
             else:
-                st.success("¡Todos presentes!")
+                st.success("¡Todos empadronados!")
 
         st.divider()
         if st.button("⚡ Empadronar todos/as (modo demo)", type="secondary", key=f"{pref}demo"):
@@ -269,16 +268,17 @@ def render_provincia(provincia: str, rol: str):
                                             key=f"{pref}reg_prop_sel")
             with col_id:
                 alias_sel_prop = st.selectbox(
-                    "Ciudadano",
-                    options=_alias_opts,
-                    format_func=_alias_fmt,
+                    "Ciudadano (empadronados)",
+                    options=_opts_emp,
+                    index=None,
+                    placeholder="Selecciona o escribe para buscar…",
                     key=f"{pref}reg_ciud_alias",
                 )
 
             if st.button("🔍 Verificar y registrar", type="primary", key=f"{pref}btn_reg_prop"):
                 cid = alias_a_id.get(alias_sel_prop, "") if alias_sel_prop else ""
                 if not cid:
-                    st.error("Selecciona un ciudadano.")
+                    st.error("Selecciona un ciudadano empadronado.")
                 else:
                     prop_codigo = prop_opciones[prop_display]
                     resultado = registrar_ciudadano_propiedad(cid, prop_codigo, provincia)
@@ -324,9 +324,9 @@ def render_provincia(provincia: str, rol: str):
                 prov_col    = col_item.get("provincia")
                 badge_col   = _PROV_BADGE.get(prov_col, "[NAC]") if ambito_col == "provincial" else "[NAC]"
 
-                # Miembros dinámicos: ciudadanos con TODAS las props como "satisface"
+                # Miembros dinámicos: solo empadronados con TODAS las props como "satisface"
                 miembros_dinamicos = [
-                    cid for cid in ids_provincia
+                    cid for cid in registrados_ids
                     if all(
                         matriz_desc_col.get(cid, {}).get(pc) == "satisface"
                         for pc in props_col
@@ -352,16 +352,17 @@ def render_provincia(provincia: str, rol: str):
                     if ambito_col == "provincial":
                         st.markdown("**Registrar ciudadano en este colectivo:**")
                         alias_col_sel = st.selectbox(
-                            "Ciudadano",
-                            options=_alias_opts,
-                            format_func=_alias_fmt,
+                            "Ciudadano (empadronados)",
+                            options=_opts_emp,
+                            index=None,
+                            placeholder="Selecciona o escribe para buscar…",
                             key=f"{pref}reg_col_alias_{col_item['id']}",
                         )
                         if st.button("🔍 Verificar y registrar en colectivo",
                                      key=f"{pref}btn_col_{col_item['id']}", type="primary"):
                             cid = alias_a_id.get(alias_col_sel, "") if alias_col_sel else ""
                             if not cid:
-                                st.error("Selecciona un ciudadano.")
+                                st.error("Selecciona un ciudadano empadronado.")
                             else:
                                 resultado = registrar_ciudadano_colectivo(cid, col_item["id"], provincia)
                                 if not resultado["ok"]:
@@ -416,7 +417,7 @@ def render_provincia(provincia: str, rol: str):
             with col_der:
                 if props_sel_col:
                     st.markdown("**Ciudadanos que satisfacen TODAS (según registros)**")
-                    todos_cids_set = {r["ciudadano_id"] for r in regs_col}
+                    todos_cids_set = {r["ciudadano_id"] for r in regs_col} & registrados_ids
 
                     miembros_confirmados = [
                         cid for cid in todos_cids_set
@@ -579,7 +580,7 @@ def render_provincia(provincia: str, rol: str):
                 filas_header[0].markdown("**Ciudadano**")
                 filas_header[1].markdown("**Número de asociado**")
 
-                for c in todos_provincia:
+                for c in empadronados:
                     cols = st.columns([3, 2])
                     cols[0].markdown(nombre_con_retrato_html(c, size=24), unsafe_allow_html=True)
                     frac_val = fracs_previas.get(c["id"], "")
