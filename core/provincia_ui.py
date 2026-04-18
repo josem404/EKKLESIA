@@ -90,6 +90,9 @@ def render_provincia(provincia: str, rol: str):
     # ── Datos de la provincia ─────────────────────────────────────────────────
     todos_provincia = get_ciudadanos(provincia=provincia)
     ids_provincia = {c["id"]: c for c in todos_provincia}
+    alias_a_id = {c["alias"]: c["id"] for c in todos_provincia}
+    _alias_opts = [""] + [c["alias"] for c in todos_provincia]
+    _alias_fmt  = lambda v: "— Selecciona o escribe para buscar —" if v == "" else v
 
     # Session-state con prefijo de provincia para evitar conflictos al navegar
     pref = f"{provincia}_"
@@ -113,17 +116,20 @@ def render_provincia(provincia: str, rol: str):
         """)
 
         with st.form(f"{pref}registro_form"):
-            id_input = st.text_input("ID del ciudadano",
-                                     placeholder="ej: c-mag-01  o pega el código QR aquí",
-                                     key=f"{pref}reg_id_input")
+            alias_sel_reg = st.selectbox(
+                "Apodo del ciudadano",
+                options=_alias_opts,
+                format_func=_alias_fmt,
+                key=f"{pref}reg_alias_input",
+            )
             registrar = st.form_submit_button("Empadronar ciudadano/a", type="primary")
 
         if registrar:
-            id_limpio = id_input.strip()
+            id_limpio = alias_a_id.get(alias_sel_reg, "") if alias_sel_reg else ""
             if not id_limpio:
-                st.error("Introduce un ID.")
+                st.error("Selecciona un ciudadano.")
             elif id_limpio not in ids_provincia:
-                st.error(f"ID «{id_limpio}» no encontrado en {NOMBRES_PROVINCIA[provincia]}.")
+                st.error(f"Ciudadano no encontrado en {NOMBRES_PROVINCIA[provincia]}.")
             elif id_limpio in st.session_state[reg_key]:
                 st.warning("Este ciudadano ya estaba registrado.")
             else:
@@ -262,14 +268,17 @@ def render_provincia(provincia: str, rol: str):
                 prop_display = st.selectbox("Propiedad", options=list(prop_opciones.keys()),
                                             key=f"{pref}reg_prop_sel")
             with col_id:
-                ciudadano_input = st.text_input("Código del ciudadano",
-                                                placeholder="ej: c-mag-01",
-                                                key=f"{pref}reg_ciud_id")
+                alias_sel_prop = st.selectbox(
+                    "Ciudadano",
+                    options=_alias_opts,
+                    format_func=_alias_fmt,
+                    key=f"{pref}reg_ciud_alias",
+                )
 
             if st.button("🔍 Verificar y registrar", type="primary", key=f"{pref}btn_reg_prop"):
-                cid = ciudadano_input.strip()
+                cid = alias_a_id.get(alias_sel_prop, "") if alias_sel_prop else ""
                 if not cid:
-                    st.error("Introduce el código del ciudadano.")
+                    st.error("Selecciona un ciudadano.")
                 else:
                     prop_codigo = prop_opciones[prop_display]
                     resultado = registrar_ciudadano_propiedad(cid, prop_codigo, provincia)
@@ -342,15 +351,17 @@ def render_provincia(provincia: str, rol: str):
                     # Solo permitir registrar en colectivos propios (no nacionales desde aquí)
                     if ambito_col == "provincial":
                         st.markdown("**Registrar ciudadano en este colectivo:**")
-                        cid_col_input = st.text_input(
-                            "Código del ciudadano", placeholder="ej: c-mag-01",
-                            key=f"{pref}reg_col_{col_item['id']}"
+                        alias_col_sel = st.selectbox(
+                            "Ciudadano",
+                            options=_alias_opts,
+                            format_func=_alias_fmt,
+                            key=f"{pref}reg_col_alias_{col_item['id']}",
                         )
                         if st.button("🔍 Verificar y registrar en colectivo",
                                      key=f"{pref}btn_col_{col_item['id']}", type="primary"):
-                            cid = cid_col_input.strip()
+                            cid = alias_a_id.get(alias_col_sel, "") if alias_col_sel else ""
                             if not cid:
-                                st.error("Introduce el código del ciudadano.")
+                                st.error("Selecciona un ciudadano.")
                             else:
                                 resultado = registrar_ciudadano_colectivo(cid, col_item["id"], provincia)
                                 if not resultado["ok"]:

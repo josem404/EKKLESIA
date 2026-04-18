@@ -130,14 +130,15 @@ with col_nombre:
         else:
             st.caption("Ninguna coincidencia exacta en alguna palabra. Prueba con el nombre completo.")
 
-# ── Resultado: mostrar función si el nombre es correcto ───────────────────────
+# ── Resultado: mostrar función solo si AMBOS (número y nombre) son correctos ──
 if nombre_sel:
-    entrada = next((a for a in apodos if a["nombre_real"] == nombre_sel), None)
-    if not entrada:
-        st.info(f"**{nombre_sel}** es una mujer importante en la ciencia, pero no tiene función asignada en Funcionalia. Sigue buscando.")
+    if not num_sel:
+        st.info("Selecciona también un número de biografía para verificar.")
     else:
-        # Verificar coherencia con el número seleccionado
-        if num_sel and num_sel != entrada["numero"]:
+        entrada = next((a for a in apodos if a["nombre_real"] == nombre_sel), None)
+        if not entrada:
+            st.info(f"**{nombre_sel}** es una mujer importante en la ciencia, pero no tiene función asignada en Funcionalia. Sigue buscando.")
+        elif num_sel != entrada["numero"]:
             st.warning("⚠️ Ese nombre no se corresponde con el número de biografía seleccionado.")
         else:
             ciudadano = ciudadanos.get(entrada["ciudadano_id"])
