@@ -1,7 +1,7 @@
 [
   {
     "id": "c-mag-01",
-    "alias": "La Maestra de Alejandría — f₁",
+    "alias": "Hipatía de Alejandría — f₁",
     "portrait": "Icons_01.png",
     "nombre_real": "Hipatía de Alejandría",
     "provincia": "magnitudia",
@@ -32,7 +32,7 @@
   },
   {
     "id": "c-mag-02",
-    "alias": "La Encantadora de Números — f₂",
+    "alias": "Ada Lovelace — f₂",
     "portrait": "Icons_02.png",
     "nombre_real": "Ada Lovelace",
     "provincia": "magnitudia",
@@ -63,7 +63,7 @@
   },
   {
     "id": "c-mag-03",
-    "alias": "La Madre del Álgebra Moderna — f₃",
+    "alias": "Emmy Noether — f₃",
     "portrait": "Icons_03.png",
     "nombre_real": "Emmy Noether",
     "provincia": "magnitudia",
@@ -94,7 +94,7 @@
   },
   {
     "id": "c-mag-04",
-    "alias": "El Pseudónimo de Monsieur LeBlanc — f₄",
+    "alias": "Sophie Germain — f₄",
     "portrait": "Icons_04.png",
     "nombre_real": "Sophie Germain",
     "provincia": "magnitudia",
@@ -125,7 +125,7 @@
   },
   {
     "id": "c-mag-05",
-    "alias": "La Autora del Primer Texto Completo — f₅",
+    "alias": "Maria Gaetana Agnesi — f₅",
     "portrait": "Icons_05.png",
     "nombre_real": "Maria Gaetana Agnesi",
     "provincia": "magnitudia",
@@ -152,7 +152,7 @@
   },
   {
     "id": "c-mag-06",
-    "alias": "La Reina de las Ecuaciones en el Báltico — f₆",
+    "alias": "Sofia Kovalevskaya — f₆",
     "portrait": "Icons_06.png",
     "nombre_real": "Sofia Kovalevskaya",
     "provincia": "magnitudia",
@@ -183,7 +183,7 @@
   },
   {
     "id": "c-mag-07",
-    "alias": "La Dama de la Lámpara — f₇",
+    "alias": "Florence Nightingale — f₇",
     "portrait": "Icons_07.png",
     "nombre_real": "Florence Nightingale",
     "provincia": "magnitudia",
@@ -214,7 +214,7 @@
   },
   {
     "id": "c-mag-08",
-    "alias": "La Comisionada del Trabajo — f₈",
+    "alias": "Janet L. Norwood — f₈",
     "portrait": "Icons_08.png",
     "nombre_real": "Janet L. Norwood",
     "provincia": "magnitudia",
@@ -241,7 +241,7 @@
   },
   {
     "id": "c-mag-09",
-    "alias": "La Primera Dama de la Estadística — f₉",
+    "alias": "Gertrude Cox — f₉",
     "portrait": "Icons_09.png",
     "nombre_real": "Gertrude Cox",
     "provincia": "magnitudia",
@@ -272,7 +272,7 @@
   },
   {
     "id": "c-mag-10",
-    "alias": "La Demógrafa de las Migraciones — f₁₀",
+    "alias": "Dorothy Swaine Thomas — f₁₀",
     "portrait": "Icons_10.png",
     "nombre_real": "Dorothy Swaine Thomas",
     "provincia": "magnitudia",
@@ -303,7 +303,7 @@
   },
   {
     "id": "c-mag-11",
-    "alias": "La Estadística de la Cerveza y las Prisiones — f₁₁",
+    "alias": "Stella Cunliffe — f₁₁",
     "portrait": "Icons_11.png",
     "nombre_real": "Stella Cunliffe",
     "provincia": "magnitudia",
@@ -338,7 +338,7 @@
   },
   {
     "id": "c-mag-12",
-    "alias": "La Computadora Humana — f₁₂",
+    "alias": "Katherine Johnson — f₁₂",
     "portrait": "Icons_12.png",
     "nombre_real": "Katherine Johnson",
     "provincia": "magnitudia",
@@ -369,7 +369,7 @@
   },
   {
     "id": "c-mag-13",
-    "alias": "La Programadora de Fortran — f₁₃",
+    "alias": "Dorothy Vaughan — f₁₃",
     "portrait": "Icons_13.png",
     "nombre_real": "Dorothy Vaughan",
     "provincia": "magnitudia",
@@ -400,7 +400,7 @@
   },
   {
     "id": "c-mag-14",
-    "alias": "La Ingeniera de los Túneles de Viento — f₁₄",
+    "alias": "Mary Jackson — f₁₄",
     "portrait": "Icons_14.png",
     "nombre_real": "Mary Jackson",
     "provincia": "magnitudia",
@@ -431,7 +431,7 @@
   },
   {
     "id": "c-mag-15",
-    "alias": "La Mente detrás del GPS — f₁₅",
+    "alias": "Gladys West — f₁₅",
     "portrait": "Icons_15.png",
     "nombre_real": "Gladys West",
     "provincia": "magnitudia",
@@ -462,7 +462,7 @@
   },
   {
     "id": "c-int-01",
-    "alias": "La Primera en el Control de Misión — f₁₆",
+    "alias": "Frances Northcutt — f₁₆",
     "portrait": "Icons_16.png",
     "nombre_real": "Frances Northcutt",
     "provincia": "intervalia",
@@ -493,7 +493,7 @@
   },
   {
     "id": "c-int-02",
-    "alias": "La Defensora del Sufragio — f₁₇",
+    "alias": "Clara Campoamor — f₁₇",
     "portrait": "Icons_17.png",
     "nombre_real": "Clara Campoamor",
     "provincia": "intervalia",
@@ -524,7 +524,7 @@
   },
   {
     "id": "c-int-03",
-    "alias": "La Directora de Prisiones — f₁₈",
+    "alias": "Victoria Kent — f₁₈",
     "portrait": "Icons_18.png",
     "nombre_real": "Victoria Kent",
     "provincia": "intervalia",
@@ -551,7 +551,7 @@
   },
   {
     "id": "c-int-04",
-    "alias": "La Diputada de las Tres Legislaturas — f₁₉",
+    "alias": "Margarita Nelken — f₁₉",
     "portrait": "Icons_19.png",
     "nombre_real": "Margarita Nelken",
     "provincia": "intervalia",
@@ -578,7 +578,7 @@
   },
   {
     "id": "c-int-05",
-    "alias": "La Ministra Anarquista — f₂₀",
+    "alias": "Federica Montseny — f₂₀",
     "portrait": "Icons_20.png",
     "nombre_real": "Federica Montseny",
     "provincia": "intervalia",
@@ -613,7 +613,7 @@
   },
   {
     "id": "c-int-06",
-    "alias": "La Visitadora de Cárceles — f₂₁",
+    "alias": "Concepción Arenal — f₂₁",
     "portrait": "Icons_21.png",
     "nombre_real": "Concepción Arenal",
     "provincia": "intervalia",
@@ -640,7 +640,7 @@
   },
   {
     "id": "c-int-07",
-    "alias": "La Primera Corresponsal de Guerra — f₂₂",
+    "alias": "Carmen de Burgos — f₂₂",
     "portrait": "Icons_22.png",
     "nombre_real": "Carmen de Burgos",
     "provincia": "intervalia",
@@ -671,7 +671,7 @@
   },
   {
     "id": "c-int-08",
-    "alias": "La Directora de la Residencia — f₂₃",
+    "alias": "María de Maeztu — f₂₃",
     "portrait": "Icons_23.png",
     "nombre_real": "María de Maeztu",
     "provincia": "intervalia",
@@ -706,7 +706,7 @@
   },
   {
     "id": "c-int-09",
-    "alias": "La Matemática de Yale — f₂₄",
+    "alias": "María Wonenburger — f₂₄",
     "portrait": "Icons_24.png",
     "nombre_real": "María Wonenburger",
     "provincia": "intervalia",
@@ -737,7 +737,7 @@
   },
   {
     "id": "c-int-10",
-    "alias": "La Numeróloga de la Academia — f₂₅",
+    "alias": "Pilar Bayer — f₂₅",
     "portrait": "Icons_25.png",
     "nombre_real": "Pilar Bayer",
     "provincia": "intervalia",
@@ -764,7 +764,7 @@
   },
   {
     "id": "c-bre-01",
-    "alias": "La Inventora del Pre-Ebook — f₂₆",
+    "alias": "Ángela Ruiz Robles — f₂₆",
     "portrait": "Icons_26.png",
     "nombre_real": "Ángela Ruiz Robles",
     "provincia": "brevitas",
@@ -799,7 +799,7 @@
   },
   {
     "id": "c-bre-02",
-    "alias": "La Crítica de los Algoritmos — f₂₇",
+    "alias": "Cathy O'Neil — f₂₇",
     "portrait": "Icons_27.png",
     "nombre_real": "Cathy O'Neil",
     "provincia": "brevitas",
@@ -826,7 +826,7 @@
   },
   {
     "id": "c-bre-03",
-    "alias": "La Criptógrafa del Premio Turing — f₂₈",
+    "alias": "Shafi Goldwasser — f₂₈",
     "portrait": "Icons_28.png",
     "nombre_real": "Shafi Goldwasser",
     "provincia": "brevitas",
@@ -857,7 +857,7 @@
   },
   {
     "id": "c-bre-04",
-    "alias": "La Dama de Hierro Africana — f₂₉",
+    "alias": "Ellen Johnson Sirleaf — f₂₉",
     "portrait": "Icons_29.png",
     "nombre_real": "Ellen Johnson Sirleaf",
     "provincia": "brevitas",
@@ -888,7 +888,7 @@
   },
   {
     "id": "c-bre-05",
-    "alias": "La Reina de las Ciencias del XIX — f₃₀",
+    "alias": "Mary Somerville — f₃₀",
     "portrait": "Icons_30.png",
     "nombre_real": "Mary Somerville",
     "provincia": "brevitas",

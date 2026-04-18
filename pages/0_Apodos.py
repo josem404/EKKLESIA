@@ -62,10 +62,17 @@ def _lista_candidatas(nombres_reales_tuple: tuple) -> list[str]:
     return todas
 
 
+def _normalizar(s: str) -> str:
+    """Minúsculas sin tildes ni puntuación especial."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", s.lower())
+    return "".join(c for c in s if unicodedata.category(c) != "Mn")
+
+
 def _coincide_palabra(texto: str, candidata: str) -> bool:
-    """True si alguna palabra completa del texto coincide con alguna palabra del nombre."""
-    palabras_buscadas = set(texto.lower().split())
-    palabras_nombre = set(candidata.lower().split())
+    """True si alguna palabra completa (normalizada) del texto coincide con alguna del nombre."""
+    palabras_buscadas = set(_normalizar(texto).split())
+    palabras_nombre = set(_normalizar(candidata).split())
     return bool(palabras_buscadas & palabras_nombre)
 
 
@@ -131,10 +138,7 @@ if nombre_sel:
     else:
         # Verificar coherencia con el número seleccionado
         if num_sel and num_sel != entrada["numero"]:
-            st.warning(
-                f"⚠️ El nombre **{nombre_sel}** corresponde a la biografía **{entrada['numero']}**, "
-                f"no a la {num_sel}."
-            )
+            st.warning("⚠️ Ese nombre no se corresponde con el número de biografía seleccionado.")
         else:
             ciudadano = ciudadanos.get(entrada["ciudadano_id"])
             if ciudadano:
