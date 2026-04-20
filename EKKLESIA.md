@@ -4,15 +4,18 @@ Aplicación web interactiva para un juego de rol matemático-político dirigido 
 
 **Objetivo pedagógico:** funciones a trozos, propiedades (continuidad, asíntotas, monotonía, acotación, etc.), números primos como identificadores únicos, sistemas electorales.
 
+**Producción:** [ekklesia.streamlit.app](https://ekklesia.streamlit.app/) | **Repo:** [josem404/EKKLESIA](https://github.com/josem404/EKKLESIA) (GNU GPL v3)
+
 ---
 
 ## Roles del juego
 
 | Rol | Descripción | Página |
 |-----|-------------|--------|
+| *(sin login)* | Página de Apodos: descubrir la propia función por biografía | `pages/0_Apodos.py` |
 | **Rey** (Profesor) | Vista maestra del oráculo. Puede activar "Intervención" para acceder a cualquier otra página. | `pages/1_rey.py` |
 | **Gobierno** | Nacionaliza propiedades, crea colectivos y asociaciones nacionales, revisa funciones. | `pages/2_gobierno.py` |
-| **Magnitudia / Intervalia / Brevitas** | Provincias. Registran ciudadanos en sus propiedades, crean colectivos y asociaciones provinciales. | `pages/3-5_*.py` |
+| **Magnitudia / Intervalia / Brevitas** | Provincias. Empadronan ciudadanos y registran propiedades, colectivos y asociaciones. | `pages/3-5_*.py` |
 | **Poder Judicial** | Valida asociaciones propuestas y ofrece un verificador de IDs racionales. | `pages/6_poder_judicial.py` |
 | **Congreso** | Vota leyes *(pendiente, Sprint 3)*. | — |
 
@@ -22,12 +25,13 @@ El Rey **solo** accede a otras páginas cuando tiene la casilla "Intervención" 
 
 ## Conceptos clave
 
-- **Propiedad**: característica matemática de una función (ej. "continua en 0", "asíntota horizontal"). Pertenece a una provincia `[MAG]`, `[INT]`, `[BRE]` o es nacional `[NAC]`. El Gobierno puede nacionalizar una propiedad provincial.
-- **Primo asignado**: cada propiedad tiene un número primo único, usado para calcular IDs racionales.
-- **Oráculo**: el campo `propiedades` en `data/ciudadanos.json` es la verdad absoluta. Solo lo ve el Rey.
-- **Registros**: lo que cada provincia ha *descubierto*. Viven en `data/registros.json`. Una provincia sabe de una propiedad de un ciudadano solo si ha hecho un registro explícito o si se ha validado una asociación que la incluya.
-- **Colectivo**: grupo de ciudadanos que satisfacen TODAS las propiedades de un conjunto (lógica AND). Los miembros se calculan dinámicamente. El botón *COLECTIVO COMPLETO* verifica contra el oráculo.
-- **Asociación**: grupo donde cada ciudadano queda **unívocamente identificado**. ID = numerador (primos de props que satisface) / denominador (primos que no satisface). Los alumnos calculan su ID a mano; el sistema lo valida. Al aprobar → escribe registros automáticamente.
+- **Ciudadano**: cada alumno. Tiene un **alias** = nombre de mujer científica + fₙ (ej. `"Hipatía de Alejandría — f₁"`). El **apodo** narrativo (`"La Maestra de Alejandría"`) solo aparece en la página de Apodos para el juego de descubrimiento.
+- **Propiedad**: característica matemática (ej. "continua en 0"). Pertenece a una provincia `[MAG]`, `[INT]`, `[BRE]` o es nacional `[NAC]`. Primo asignado único.
+- **Oráculo**: `ciudadanos.json["propiedades"]` = verdad absoluta. Solo lo ve el Rey.
+- **Registros**: lo que cada provincia ha *descubierto*. Viven en `data/registros.json`.
+- **Colectivo**: grupo con lógica AND sobre propiedades. Miembros calculados dinámicamente desde registros descubiertos.
+- **Asociación**: grupo donde cada ciudadano queda **unívocamente identificado** por ID racional. Los alumnos lo calculan a mano; el sistema valida. Al aprobar → escribe registros automáticamente.
+- **Empadronamiento**: cada sesión, la provincia registra qué ciudadanos están presentes. Solo los empadronados aparecen en las tabs de trabajo (Propiedades, Colectivos, Asociaciones).
 
 ---
 
@@ -45,47 +49,51 @@ El Rey **solo** accede a otras páginas cuando tiene la casilla "Intervención" 
 
 ```
 ekklesia/
-├── main.py                     # Login con glassmorphism + router de roles
+├── main.py                     # Login glassmorphism + router de roles
 ├── EKKLESIA.md                 # Este documento
 ├── requirements.txt
 ├── .streamlit/config.toml      # Tema pastel naranja/marrón/beige
+├── assets/
+│   ├── congreso_imagen.png     # Fondo de main.py (también en Streamlit Cloud)
+│   └── portraits/              # Icons_01.png … Icons_40.png (copia para Cloud)
 │
 ├── core/
 │   ├── auth.py                 # ROLES, contraseñas, guards (requiere_rol)
 │   ├── db.py                   # CRUD Supabase + fallback JSON
 │   │                           # validar_asociacion() escribe registros al aprobar
-│   ├── theme.py                # Paleta, CSS global, dark mode, retratos,
-│   │                           # aplicar_fondo_main(), header_rol(), banner_imagen()
+│   ├── theme.py                # Paleta, CSS global, retratos,
+│   │                           # aplicar_fondo_main(), header_rol(), ICONOS, COLORES
 │   ├── provincia_ui.py         # render_provincia() — UI compartida de las 3 provincias
+│   │                           # Empadronamiento → filtra tabs de trabajo a solo empadronados
 │   ├── components.py           # Tablas con retratos, grid de gráficas
-│   ├── grapher.py              # Plotly + notación LaTeX de condiciones
+│   ├── grapher.py              # Plotly + formatear_definicion_latex()
 │   ├── math_engine.py          # Evaluador SymPy
 │   └── prime_ids.py            # IDs racionales + validar_fraccion_miembro()
 │
 ├── pages/
-│   ├── 1_rey.py                # 6 tabs: Estado, Gráficas, Matriz (oráculo+registros),
-│   │                           # Colectivos, Asociaciones, Nueva propiedad
-│   ├── 2_gobierno.py           # 5 tabs: Propiedades, Colectivos, Asociaciones,
-│   │                           # Funciones, Registros
+│   ├── 0_Apodos.py             # Sin login: 30 biografías + revelar función al acertar
+│   ├── 1_rey.py                # 6 tabs: Estado, Gráficas, Matriz, Colectivos, Asociaciones, Nueva prop.
+│   ├── 2_gobierno.py           # 5 tabs: Ciudadanía, Propiedades, Registros, Colectivos, Asociaciones
 │   ├── 3_Magnitudia.py         # render_provincia("magnitudia")
 │   ├── 4_Intervalia.py         # render_provincia("intervalia")
 │   ├── 5_Brevitas.py           # render_provincia("brevitas")
 │   └── 6_poder_judicial.py     # Validar asociaciones + verificador de IDs
 │
 ├── data/
-│   ├── ciudadanos.json         # 30 ciudadanos (oráculo + portrait + alias abreviados)
+│   ├── ciudadanos.json         # 30 ciudadanos: alias = "Nombre Mujer — fₙ", nombre_real, portrait
+│   ├── apodos.json             # 30 entradas biográficas para la página Apodos
 │   ├── propiedades.json        # 10 propiedades con primo asignado
-│   ├── colectivos.json         # 6 colectivos (2 nac. + 4 provinciales, con miembros)
-│   ├── asociaciones.json       # 2 asociaciones: Magnitudia aprobada, Intervalia pendiente
-│   ├── registros.json          # 21 registros descubiertos por las provincias
+│   ├── colectivos.json         # Colectivos activos (mid-game)
+│   ├── asociaciones.json       # Asociaciones (1 aprobada + 1 pendiente, mid-game)
+│   ├── registros.json          # Registros descubiertos por las provincias
 │   └── nombres.json
 │
 └── sql/schema.sql
 
 # Fuera de ekklesia/ (en MASTER FORMACIÓN/):
 Iconos e imagenes/
-├── congreso_imagen.png         # Fondo de la pantalla de login/main
-└── Portraits/                  # Icons_01.png … Icons_40.png (retratos pixelart)
+├── congreso_imagen.png         # Original local
+└── Portraits/                  # Icons_01.png … Icons_40.png (original local)
 ```
 
 ---
@@ -93,8 +101,8 @@ Iconos e imagenes/
 ## Cómo ejecutar
 
 ```bash
-cd "ruta/a/MASTER FORMACIÓN/ekklesia"
-pip install -r requirements.txt
+cd "c:/Users/newsy/LGgram GDrive sync/Maths Obsidian/MASTER FORMACIÓN/ekklesia"
+pip install streamlit sympy pandas plotly
 streamlit run main.py
 ```
 
@@ -112,34 +120,63 @@ streamlit run main.py
 | poder_judicial | `judicial2024` |
 | congreso | `congreso2024` |
 
-En producción, sobrescribe con `.streamlit/secrets.toml`.
+En producción, sobrescribe con `.streamlit/secrets.toml` (configurar en Streamlit Cloud → Settings → Secrets).
 
 ---
 
-## Estado actual del juego (mid-game simulado)
+## Página de Apodos (`0_Apodos.py`)
 
-Los datos reflejan una partida a mitad del juego:
+Accesible **sin login**. Dinámica de juego inicial:
 
-- **Registros:** 21 entradas — varias provincias han registrado manualmente propiedades de ciudadanos de Magnitudia; 7 provienen de la asociación aprobada.
-- **Colectivos activos:** 6 en total. Dos nacionales (del Rey), tres provinciales con miembros. Uno de Intervalia vacío (ningún ciudadano cumple `definida_en_0` AND `asintota_vertical` simultáneamente — caso didáctico).
-- **Asociaciones:** Magnitudia envió y el Poder Judicial aprobó "Asociación de la Continuidad" (4 miembros, props `continua_en_0` × `punto_fijo`). Intervalia tiene pendiente "Asociación del Intervalo" (5 miembros, 3 props).
+1. El alumno lee su biografía numerada (30 en total, 6 grupos temáticos).
+2. Escribe en el buscador parte del nombre de la mujer que cree que es su apodo.
+3. El buscador filtra por **coincidencia de palabra completa** (normaliza tildes y mayúsculas).
+4. Cuando selecciona el nombre Y el número de biografía correctos → se revela la gráfica y definición de su función.
+5. La lista incluye **15 señuelos** (mujeres científicas sin función asignada) para que no sea trivial.
+
+**Grupos temáticos de las 30 mujeres:**
+
+- Arquitectas de la Lógica y el Cálculo (Hipatía → Gladys West, c-mag-01…15)
+- Pioneras del Derecho y la Democracia (Frances Northcutt → Pilar Bayer, c-int-01…10)
+- Inventoras e Inconformistas (Ángela Ruiz Robles → Mary Somerville, c-bre-01…05)
 
 ---
 
-## Hoja de ruta
+## Mecánica de empadronamiento
 
-- **Sprint 3 (siguiente):** `pages/7_congreso.py`, propuesta y votación de leyes, aplicación de deltas a bloques, penalización por COLECTIVO COMPLETO fallido.
-- **Sprint 4:** sistema electoral D'Hondt, partidos, senadores.
-- **Sprint 5:** Supabase Realtime, QR por ciudadano, pantalla pública proyectable, despliegue en Streamlit Community Cloud.
+Al inicio de cada sesión, la provincia empadrona a los alumnos presentes desde la pestaña **Padrón**:
+
+- El selectbox muestra todos los ciudadanos de la provincia; filtrable al escribir.
+- Solo los empadronados aparecen en las tabs de Propiedades, Colectivos y Asociaciones.
+- **"Empadronar todos/as (modo demo)"** registra a todos para pruebas.
+- El empadronamiento es **por sesión** (session_state); se pierde al recargar.
 
 ---
 
 ## Convenciones de código
 
-- **Alias de ciudadanos:** `"Nombre P. — fₙ"` — inicial de provincia (M./I./B.) y subíndice numérico.
-- **Campo `portrait`** en `ciudadanos.json`: nombre de archivo en `Iconos e imagenes/Portraits/`.
-- **Propiedades:** etiqueta `[NAC]` si nacionales; `[MAG]/[INT]/[BRE]` si provinciales.
+- **Alias de ciudadanos:** `"Nombre Real — fₙ"` — nombre de la mujer científica + subíndice numérico.
+- **Apodo narrativo:** solo en `apodos.json` y en la página `0_Apodos.py`.
+- **Campo `portrait`** en `ciudadanos.json`: nombre de archivo (ej. `"Icons_01.png"`).
+- **Resolución de assets:** `_resolve_asset(nombre)` en `theme.py` busca: `ekklesia/assets/<nombre>` → ruta absoluta → relativa a `ekklesia/` → `Iconos e imagenes/<nombre>`.
+- **Retratos:** `_portraits_dir()` prueba `ekklesia/assets/portraits/` primero (Streamlit Cloud), luego `MASTER FORMACIÓN/Iconos e imagenes/Portraits/`.
 - **Session state** en `provincia_ui.py` prefijado `{provincia}_` para evitar colisiones en modo intervención del Rey.
-- **Rutas de assets:** `_resolve_asset(ruta)` en `theme.py` prueba: ruta absoluta → relativa a `ekklesia/` → `Iconos e imagenes/<nombre>` → `ekklesia/assets/<nombre>`.
-- **Glassmorphism:** solo activo en `main.py` (vía `aplicar_fondo_main()`). El CSS aplica glass a `.ekk-glass` divs HTML y a `[data-testid="stForm"]`. No afecta otras páginas.
-- **Modo oscuro:** toggle en sidebar, disponible en todas las páginas. Los widgets nativos de Streamlit no se ven afectados (limitación del enfoque CSS).
+- **Glassmorphism:** solo en `main.py` vía `aplicar_fondo_main()`. CSS aplica glass a `.ekk-glass` y a `[data-testid="stForm"]`.
+- **Modo oscuro:** código presente pero toggle desactivado (funciona mal con Streamlit native widgets). Fácilmente reactivable en `theme.py`.
+- **Selectboxes de ciudadano:** usan `index=None` + `placeholder=...` para que el texto de ayuda sea genuino (no opción seleccionable).
+
+---
+
+## Estado del juego (datos mid-game simulados)
+
+- **Registros:** ~21 entradas — Magnitudia registrada manualmente + 7 de la asociación aprobada.
+- **Colectivos:** 6 activos (2 nacionales del Rey, 4 provinciales; 1 de Intervalia vacío — caso didáctico).
+- **Asociaciones:** "Asociación de la Continuidad" de Magnitudia (aprobada, 4 miembros) + "Asociación del Intervalo" de Intervalia (pendiente, 5 miembros).
+
+---
+
+## Hoja de ruta
+
+- **Sprint 3 (siguiente):** `pages/7_congreso.py`, propuesta y votación de leyes, aplicación de deltas a bloques, penalización COLECTIVO COMPLETO.
+- **Sprint 4:** sistema electoral D'Hondt, partidos, senadores.
+- **Sprint 5:** Supabase Realtime, QR por ciudadano, pantalla pública proyectable.
